@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "healthindicator",
+  "version": "${version}",
+  "name": "Health indicator",
+  "description": "Показывает HP атакованного игрока у прицела",
+  "authors": ["Mikyo"],
+  "contact": {
+    "homepage": "https://t.me/yeseconomicss"
+  },
+  "license": "All-Rights-Reserved",
+  "environment": "client",
+  "mixins": [
+    "healthindicator.mixins.json"
+  ],
+  "entrypoints": {
+    "client": [
+      "net.healthindicator.healthindicator.client.HealthindicatorClient"
+    ],
+    "main": [
+      "net.healthindicator.healthindicator.Healthindicator"
+    ],
+    "modmenu": [
+      "net.healthindicator.healthindicator.client.HealthModMenu"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.11.0",
+    "fabric": "*",
+    "minecraft": "1.16.5",
+    "java": ">=8"
+  },
+  "suggests": {
+    "modmenu": "*"
+  }
+}
